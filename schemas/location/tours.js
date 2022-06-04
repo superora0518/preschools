@@ -27,6 +27,13 @@ export default {
       validation: Rule => Rule.required()
     },
     {
+      name: 'classifies',
+      title: 'Classifies*',
+      type: 'array',
+      of: [{type: 'reference', to: {type: 'classify'}}],
+      validation: Rule => Rule.required()
+    },
+    {
       name: 'description',
       title: 'Description*',
       type: 'blockContent',
