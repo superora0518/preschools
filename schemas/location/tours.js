@@ -28,9 +28,10 @@ export default {
     },
     {
       name: 'classifies',
-      title: 'Classifies',
+      title: 'Classifies*',
       type: 'array',
       of: [{type: 'reference', to: {type: 'classify'}}],
+      validation: Rule => Rule.required()
     },
     {
       name: 'description',
@@ -73,9 +74,10 @@ export default {
     },
     {
       name: 'serves',
-      title: 'Serves',
+      title: 'Serves*',
       type: 'array',
-      of: [{type: 'reference', to: {type: 'serve'}}]
+      of: [{type: 'reference', to: {type: 'serve'}}],
+      validation: Rule => Rule.required()
     },
     {
       name: 'hours',
