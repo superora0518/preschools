@@ -6,11 +6,11 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // We import object and document schemas
 import blockContent from './blockContent'
-import classify from './classify'
-import tours from './tours'
-import location from './location'
-import serve from './serve'
-import schedule from './schedule'
+import classify from './location/classify'
+import tours from './location/tours'
+import location from './location/location'
+import serve from './location/serve'
+import schedule from './location/schedule'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({

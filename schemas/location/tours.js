@@ -27,6 +27,12 @@ export default {
       validation: Rule => Rule.required()
     },
     {
+      name: 'classifies',
+      title: 'Classifies',
+      type: 'array',
+      of: [{type: 'reference', to: {type: 'classify'}}],
+    },
+    {
       name: 'description',
       title: 'Description*',
       type: 'blockContent',
@@ -67,10 +73,9 @@ export default {
     },
     {
       name: 'serves',
-      title: 'Serves*',
+      title: 'Serves',
       type: 'array',
-      of: [{type: 'reference', to: {type: 'serve'}}],
-      validation: Rule => Rule.required()
+      of: [{type: 'reference', to: {type: 'serve'}}]
     },
     {
       name: 'hours',
