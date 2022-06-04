@@ -14,8 +14,7 @@ export default {
       name: 'location',
       title: 'Location*',
       type: 'reference',
-      to: {type: 'location'},
-      validation: Rule => Rule.required()
+      to: {type: 'location'}
     },
     {
       name: 'mainImage',
@@ -75,8 +74,7 @@ export default {
       name: 'serves',
       title: 'Serves*',
       type: 'array',
-      of: [{type: 'reference', to: {type: 'serve'}}],
-      validation: Rule => Rule.required()
+      of: [{type: 'reference', to: {type: 'serve'}}]
     },
     {
       name: 'hours',
