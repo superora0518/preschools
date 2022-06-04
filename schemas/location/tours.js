@@ -30,8 +30,7 @@ export default {
       name: 'classifies',
       title: 'Classifies*',
       type: 'array',
-      of: [{type: 'reference', to: {type: 'classify'}}],
-      validation: Rule => Rule.required()
+      of: [{type: 'reference', to: {type: 'classify'}}]
     },
     {
       name: 'description',
