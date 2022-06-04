@@ -12,14 +12,13 @@ export default {
     },
     {
       name: 'location',
-      title: 'Location*',
+      title: 'Location',
       type: 'reference',
-      to: {type: 'location'},
-      validation: Rule => Rule.required()
+      to: {type: 'location'}
     },
     {
-      name: 'mainImage',
-      title: 'Main image*',
+      name: 'mainImageForLocation',
+      title: 'Main Image*',
       type: 'image',
       options: {
         hotspot: true,
@@ -40,43 +39,15 @@ export default {
     },
     {
       name: 'ages',
-      type: 'object',
       title: 'Ages',
-      fields: [
-        {
-          name: 'fromAge',
-          type: 'number',
-          title: 'From Age*',
-          validation: Rule => Rule.custom((duration, context) => {
-            const isShortTalk = duration && duration > 0 && duration <= 100
-            if (!isShortTalk) {
-              return 'Only Enter number from 1 to 100'
-            }
-
-            return true
-          })
-        },
-        {
-          name: 'toAge',
-          type: 'number',
-          title: 'To Age*',
-          validation: Rule => Rule.custom((duration, context) => {
-            const isShortTalk = duration && duration > 0 && duration <= 100
-            if (!isShortTalk) {
-              return 'Only Enter number from 1 to 100'
-            }
-
-            return true
-          })
-        }
-      ],
+      type: 'reference',
+      to: {type: 'age'}
     },
     {
       name: 'serves',
-      title: 'Serves*',
+      title: 'Serves',
       type: 'array',
-      of: [{type: 'reference', to: {type: 'serve'}}],
-      validation: Rule => Rule.required()
+      of: [{type: 'reference', to: {type: 'serve'}}]
     },
     {
       name: 'hours',
