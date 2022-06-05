@@ -14,6 +14,7 @@ import schedule from './location/schedule'
 import programs from './program/programs'
 import age from "./location/age";
 import functionality from "./program/functionality";
+import blogs from "./blog/blogs";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -32,6 +33,7 @@ export default createSchema({
     schedule,
     programs,
     functionality,
+    blogs,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     blockContent,
